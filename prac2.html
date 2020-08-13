@@ -8,12 +8,41 @@
 </head>
 
 <body>
+    <button onclick="bai1()">run bai1: in dãy fibonaci</button>
+    <br>
+    <p id="bai1"></p>
+    <br><br><br><br>
+    <button onclick="bai2()">run bai2</button>
+    <br><br><br><br>
     <button onclick="bai3()">run bai3</button>
     <br><br><br><br>
     <button onclick="bai4()">run bai4</button>
     <br><br><br><br>
     <button onclick="vetraitim()">run bai5</button>
     <script>
+        function bai1() {
+            let n1 = 1,
+                n2 = 2,
+                n3 = 3,
+                list = '0 ' + n1 + ' ' + n2 + ' ',
+                stop = true;
+            let bound = prompt('nhaapj giới hạn: ');
+            while (stop) {
+                n3 = n1 + n2;
+                n1 = n2;
+                n2 = n3;
+                if (n3 < bound) {
+                    list += String(n3 + ' ');
+                } else {
+                    stop = false;
+                    list = list;
+                }
+            }
+            document.getElementById('bai1').innerHTML = list;
+        }
+
+        function bai2() {}
+
         function bai3() {
             let p = '';
             let i = j = 0;

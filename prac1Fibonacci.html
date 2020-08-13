@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="re"></div>
+    <table border="1">
+        <tr>
+            <td>
+                Bài 1
+                <br>
+                <button onclick="bai1()">RUN</button>
+            </td>
+            <td>
+                Bài 2
+                <br>
+                <button onclick="bai2()">RUN</button>
+            </td>
+            <td>
+                Bài 3
+                <br>
+                <button onclick="bai3()">RUN</button>
+            </td>
+            <td>
+                Bài 4
+                <br>
+                <button onclick="bai4()">RUN</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Bài 5
+                <br>
+                <button onclick="bai5()">RUN</button>
+            </td>
+            <td>Bài 6
+                <br>
+                <button onclick="bai6()">RUN</button>
+            </td>
+            <td>Bài 7
+                <br>
+                <button onclick="bai7()">RUN</button>
+            </td>
+            <td>Bài 8
+                <br>
+                <button onclick="bai8()">RUN</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    function bai1() {
+        let i;
+        for (i = 0; i < 100; i++) {
+            let count = '';
+            count += String(i);
+            if (i == 99) {
+                alert(count + '-DONE!!');
+            }
+        }
+
+    }
+
+    function bai2() {
+        let tempe = prompt('nhập nhiệt độ: ');
+
+        tempe >= 100 ? alert('yâu cầu giảm nhiệt độ!') :
+            tempe < 20 ? alert('yêu cầu tăng nhiệt độ') :
+            alert('good!');
+    }
+
+    function bai3() {
+        let n1 = 1,
+            n2 = 2,
+            n3 = 3,
+            list = '0 ' + n1 + ' ' + n2 + ' ';
+        let bound = prompt('nhập giới hạn số phần tử trong dãy: ');
+        for (let i = 0; i < bound; i++) {
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            list += String(n3 + ' ');
+        }
+        alert(list);
+    }
+
+    function bai4() {
+        let n1 = 1,
+            n2 = 2,
+            n3 = 3,
+            result,
+            check = true;
+        // let bound = prompt('nhập giới hạn số phần tử trong dãy: ');
+
+        while (check) {
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            if (n3 % 5 == 0) {
+                result = n3;
+                check = false;
+                alert(result);
+            }
+        }
+    }
+
+    function bai5() {
+        let n1 = 1,
+            n2 = 2,
+            n3 = 0,
+            sum = n1 + n2 + n3;
+        let bound = prompt('nhập giới hạn số phần tử trong dãy: ');
+        for (let i = 0; i < bound; i++) {
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            sum += n3;
+        }
+        alert(sum);
+    }
+
+    function bai6() {
+        let result = 0;
+        alert('run');
+        for (let i = 7; i <= 30 * 7; i += 7) {
+            result += i;
+        }
+        alert(result);
+
+    }
+
+    function bai7() {}
+
+    function bai8() {}
+</script>
