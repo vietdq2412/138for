@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai3()">run bai3</button>
+    <br><br><br><br>
+    <button onclick="bai4()">run bai4</button>
+    <br><br><br><br>
+    <button onclick="vetraitim()">run bai5</button>
+    <script>
+        function bai3() {
+            let p = '';
+            let i = j = 0;
+
+            for (i; i < 5; i++) {
+                for (j; j <= i; j++) {
+                    p += '*';
+                }
+                document.write(p + '<br>');
+            }
+            alert(i);
+            document.write('<br>');
+            p = '';
+            for (i; i > 0; i--) {
+                for (j = 0; j < i; j++) {
+                    p += '*';
+                }
+                document.write(p + '<br>');
+                p = '';
+            }
+            ///////////////
+            i = j = 5;
+            document.write('<br>');
+            p = '';
+            for (i; i > 0; i--) {
+                for (j = 1; j <= 5; j++) {
+                    j < i ? p = '&nbsp ' : p = '*';
+                    document.write(p);
+                }
+                document.write('<br>');
+                p = '';
+            }
+            p = '';
+            document.write('<br>');
+            for (i = 5; i > 0; i--) {
+                for (j = 5; j > 0; j--) {
+                    j <= i ? p = '*' : p = '&nbsp ';
+                    document.write(p);
+                }
+                document.write('<br>');
+                p = '';
+            }
+            document.write('F5 to continue')
+        }
+
+        function bai4() {
+            let w = 21,
+                h = 7;
+            let i, j;
+            let p = '*'
+            for (i = 0; i < h; i++) {
+                p = '*';
+                if (i == 0 || i == h - 1) {
+                    for (j = 0; j < w; j++) {
+                        p = p + '*';
+                    }
+                } else {
+                    for (j = 0; j < w - 1; j++) {
+                        p += "&nbsp ";
+                    }
+                    p += '*';
+                }
+                document.write(p + '<br>');
+            }
+        }
+
+        function vetraitim() {
+            let a, b, size = 15;
+            let text = "";
+            for (a = size / 2; a <= size; a = a + 2) {
+                for (b = 1; b < size - a; b = b + 2) {
+                    text += "&nbsp ";
+                    document.write(text);
+                    text = "";
+                }
+                for (b = 1; b <= a; b++) {
+                    text += "*";
+                    document.write(text);
+                    text = "";
+                }
+                for (b = 1; b <= size - a; b++) {
+                    text += "&nbsp ";
+                    document.write(text);
+                    text = "";
+                }
+                for (b = 1; b <= a - 1; b++) {
+                    text += "*";
+                    document.write(text);
+                    text = "";
+                }
+                text += text + "<br>";
+                document.write(text);
+                text = "";
+            }
+            for (a = size; a >= 0; a--) {
+                for (b = a; b < size; b++) {
+                    text += "&nbsp ";
+                    document.write(text);
+                    text = "";
+                }
+                for (b = 1; b <= ((a * 2) - 1); b++) {
+                    text += "*";
+                    document.write(text);
+                    text = "";
+                }
+                text += text + "<br>";
+                document.write(text);
+                text = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
