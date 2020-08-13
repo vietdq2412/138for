@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bai1</h1>
+    <br><button onclick="bai1()">run</button>
+    <br>
+    <h1>Bai2</h1>
+    <br><button onclick="bai2()">run</button>
+
+</body>
+
+</html>
+
+<script>
+    function bai1() {
+        let n, total = 0;
+
+        while (n != -1) {
+            n = parseInt(prompt('nhap mot số: '));
+            alert(n);
+            total += n;
+        }
+        alert('tổng: ' + total);
+    }
+
+    function bai2() {
+        let i = 1;
+
+        while (i < 100) {
+            document.write("<hr width = " + i + "%>");
+            i++;
+        }
+    }
+</script>
