@@ -132,10 +132,56 @@
             result += i;
         }
         alert(result);
-
     }
 
-    function bai7() {}
+    function bai7() {
+        let i, fizzBuzz = '';
+        const FIZZ = 'Fizz';
+        const BUZZ = 'Buzz';
+        let isContinue;
 
-    function bai8() {}
+
+        for (i = 0; i < 100; i++) {
+            if (i % 3 == 0) {
+                fizzBuzz += FIZZ;
+            }
+            if (i % 5 == 0) {
+                fizzBuzz += BUZZ;
+            }
+            isContinue = confirm(i + ' - ' + fizzBuzz);
+            if (isContinue == false) {
+                i = 101;
+            }
+            fizzBuzz = '';
+        }
+    }
+
+    function bai8() {
+        let n1 = parseInt(prompt('nhập số bắt đầu: '));
+        let n2 = parseInt(prompt('nhập số kết thúc: '));
+        let result = 0;
+        let guess,
+            check = true,
+            isWrong = true;
+
+        if (n1 < n2) {
+            do {
+                result = n1 + Math.round(Math.random() * 10);
+            } while (result > n2);
+        } else {
+            alert('invalid input!')
+            check = false;
+        }
+        while (check && isWrong) {
+            guess = prompt('nhập vào số bạn đoán: ');
+            isWrong = guess != result;
+
+            if (isWrong) {
+                check = confirm('Wrong!! input again!');
+            } else {
+                alert('Correct!!')
+            }
+
+        }
+    }
 </script>
