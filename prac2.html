@@ -41,7 +41,16 @@
             document.getElementById('bai1').innerHTML = list;
         }
 
-        function bai2() {}
+        function bai2() {
+            let n = parseInt(prompt('nhập một số nguyên dương: '));
+            let i, result = 1;
+            if (n > 0) {
+                for (i = 1; i <= n; i++) {
+                    result *= i;
+                }
+                alert('giai thừa của ' + n + " = " + result);
+            }
+        }
 
         function bai3() {
             let p = '';
